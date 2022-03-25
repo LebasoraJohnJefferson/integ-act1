@@ -1,0 +1,17 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side"  opened *ngIf="isOpen">
+        <div class="dashboard">
+            <h3 class="dashboard-title">DASHBOARD MENU</h3>
+        </div>
+        <div class="dashboard-content">
+            <a mat-list-item [routerLink]="['add-user']">Add User</a>
+            <a mat-list-item [routerLink]="['user-list']">User List</a>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="icon-holder">
+            <mat-icon class="menu-icon" (click)="toggle()">list</mat-icon>
+        </div>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
